@@ -1,0 +1,11 @@
+- Feeders
+    Ground = 39
+    A = 40
+    B = 38
+- Led matrix = 
+    #+5V -> RPi pin 2, +5V
+    #GND -> RPi pin 6, GND
+    #DIN -> RPi pin 19, GPIO 10(MOSI)
+    #CS  -> RPi pin 24, GPIO 8(SPI CE0)
+    #CLK -> RPi pin 23, GPIO 11(SPI CLK)
+

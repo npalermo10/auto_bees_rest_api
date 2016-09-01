@@ -1,0 +1,25 @@
+By: Nicholas Palermo, 2016. Florida International University. npale005@fiu.edu
+* overview of device
+- This device is designed to run choice assays on honeybees automatically. Parameters are put into a file in the experiments folder and the user selects which experiment to start. Once started, python will generate a static schedule for group a and group b devices (A and B are the choices) and it will include training and testing bouts. A device controller will check the schedule and tell devices what to do. A tagger will tag the incoming data (using a model specified in the experiment) and save it to the database. 
+
+* 2016-05-11 10:21
+- dummy devices working, data tagger working for dummy devices
+- next I have to add the schedule interpreter to send commands to the pheripheral devices. Also in plans: I need an analyzer to look at the schedule to determine if the cross is "correct"
+* 2016-05-12 10:23
+- added controller to lookup things in the schedule and send commands to peripheral. Next I need to add the analyzer to tag data with "correct" or "inorrect" when a cross is made
+* 2016-05-19 18:09
+- feeders working, single led matrix working
+- I have to make the program run "sudo pigpio" on start. shouldn't be a problem since I usually run it sudo anyways. 
+- also need to add second led matrix functionality
+* 2016-05-24 13:13
+- I have both LED matrices working well. Had to get rid of the matrix group a and b. a will just be the first display and b will be the second. I will probably have to fix this later but I'm short on time. Next I will be assembling all the hardware. Still haven't tried it with 2 feeders but I'm almost certain it will ork
+* 2016-05-25 11:33
+- arduino sensors are working. Next step is to physically build everything.
+** TODO build stuff [0/3]
+[] feeders
+[] led matrix holders
+[] wiring for everything
+* 2016-08-05 13:30
+- added a simple on/off program to train bees to be interested in LEDs
+
+
