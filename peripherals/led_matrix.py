@@ -2,7 +2,6 @@ from max7219 import led
 import numpy as np
 from peripheral import Peripheral
 import time as t
-import pdb
 
 #remember that to use max7219 library, SPI needs to be activated via raspi-config. Look at github page for rm-hull max7219 library for directions on how to do this
 # connect as follows:

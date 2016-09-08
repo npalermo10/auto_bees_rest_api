@@ -2,6 +2,7 @@ from random import shuffle, randint
 import os
 import cPickle as pickle
 import time as t
+from datetime import datetime,timedelta
 
 class Scheduler():
     def __init__(self, current_experiment):
@@ -125,3 +126,16 @@ class Scheduler():
             return unpickled_schedule
         
         
+    def view_schedule(self, file_to_load):
+        schedule = self.load_schedule(file_to_load)['schedule_mat']
+        schedule_list = []
+        for idx,val in enumerate(schedule):
+            try:
+                if schedule[idx][1] != schedule[idx-1][1]:
+                    sec = timedelta(seconds = val[0])
+                    d = datetime(1,1,1) + sec
+                    schedule_list.append(["%d:%d" % (d.hour, d.minute),val[1]])
+            except:
+                break
+            
+        return schedule_list
